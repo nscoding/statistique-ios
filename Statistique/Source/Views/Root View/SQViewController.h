@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SQViewController : UIViewController
+@interface SQViewController : UIViewController <UIScrollViewDelegate>
+
+@property (nonatomic, strong) UIScrollView *scrollView;
+@property (nonatomic, strong) UIPageControl *pageControl;
 
 @end
