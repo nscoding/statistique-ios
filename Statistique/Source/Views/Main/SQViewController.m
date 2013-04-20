@@ -14,7 +14,7 @@
 // ------------------------------------------------------------------------------------------
 
 
-#define kLinesOfPages 2
+#define kNumberOfPages 2
 
 
 // ------------------------------------------------------------------------------------------
@@ -59,27 +59,34 @@
 
 - (void)buildAndConfigureScrollView
 {
+    // create the scroll view
     self.scrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
+    
+    // set the properties
     self.scrollView.delegate = self;
     self.scrollView.pagingEnabled = YES;
     self.scrollView.showsHorizontalScrollIndicator = FALSE;
     self.scrollView.showsVerticalScrollIndicator = FALSE;
 
-    self.scrollView.contentSize = CGSizeMake(self.view.frame.size.width * 2,
+    // set the content size
+    self.scrollView.contentSize = CGSizeMake(self.view.frame.size.width * kNumberOfPages,
                                              self.view.frame.size.height);
     
 
-    SQMemoryView *memoryView = [[SQMemoryView alloc] initWithFrame:CGRectMake(0, 50,
-                                                                              self.view.bounds.size.width,
-                                                                              self.view.bounds.size.height - 50)];
+    CGRect frame = CGRectMake(0, 50,
+                              self.view.bounds.size.width,
+                              self.view.bounds.size.height - 50);
+    
+    // add the first view
+    SQMemoryView *memoryView = [[SQMemoryView alloc] initWithFrame:frame];
     [self.scrollView addSubview:memoryView];
 
-    SQDeviceView *deviceView = [[SQDeviceView alloc] initWithFrame:CGRectMake(self.view.bounds.size.width, 50,
-                                                                              self.view.bounds.size.width,
-                                                                              self.view.bounds.size.height - 50)];
-    
+    // add the second view
+    frame.origin.x = self.view.bounds.size.width;
+    SQDeviceView *deviceView = [[SQDeviceView alloc] initWithFrame:frame];
     [self.scrollView addSubview:deviceView];
 
+    // add the scroll view
     [self.view addSubview:self.scrollView];
 }
 
@@ -87,13 +94,13 @@
 - (void)buildAndConfigurePageControl
 {
     self.pageControl = [[UIPageControl alloc] initWithFrame:CGRectZero];
-    self.pageControl.numberOfPages = kLinesOfPages;
+    self.pageControl.numberOfPages = kNumberOfPages;
     
     [self.pageControl addTarget:self
                          action:@selector(changePage:)
                forControlEvents:UIControlEventTouchUpInside];
     
-    CGSize sizeForControl = [self.pageControl sizeForNumberOfPages:kLinesOfPages];
+    CGSize sizeForControl = [self.pageControl sizeForNumberOfPages:kNumberOfPages];
     CGRect frame = self.pageControl.frame;
     
     frame.size = sizeForControl;

@@ -25,10 +25,6 @@
 		CDA3D29217231441001482D9 /* HeaderDevice@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CDA3D28E17231441001482D9 /* HeaderDevice@2x.png */; };
 		CDA3D29317231441001482D9 /* HeaderMemory.png in Resources */ = {isa = PBXBuildFile; fileRef = CDA3D28F17231441001482D9 /* HeaderMemory.png */; };
 		CDA3D29417231441001482D9 /* HeaderMemory@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CDA3D29017231441001482D9 /* HeaderMemory@2x.png */; };
-		CDA3D29A1723148E001482D9 /* ButtonActive.png in Resources */ = {isa = PBXBuildFile; fileRef = CDA3D2961723148E001482D9 /* ButtonActive.png */; };
-		CDA3D29B1723148E001482D9 /* ButtonActive@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CDA3D2971723148E001482D9 /* ButtonActive@2x.png */; };
-		CDA3D29C1723148E001482D9 /* ButtonPressed.png in Resources */ = {isa = PBXBuildFile; fileRef = CDA3D2981723148E001482D9 /* ButtonPressed.png */; };
-		CDA3D29D1723148E001482D9 /* ButtonPressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CDA3D2991723148E001482D9 /* ButtonPressed@2x.png */; };
 		CDA3D2A1172322B7001482D9 /* SQMemoryHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA3D2A0172322B7001482D9 /* SQMemoryHelper.m */; };
 		CDA3D2AC17233116001482D9 /* SQViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA3D2A717233116001482D9 /* SQViewController.m */; };
 		CDA3D2AD17233116001482D9 /* SQViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDA3D2A817233116001482D9 /* SQViewController.xib */; };
@@ -63,10 +59,6 @@
 		CDA3D28E17231441001482D9 /* HeaderDevice@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "HeaderDevice@2x.png"; sourceTree = "<group>"; };
 		CDA3D28F17231441001482D9 /* HeaderMemory.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HeaderMemory.png; sourceTree = "<group>"; };
 		CDA3D29017231441001482D9 /* HeaderMemory@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "HeaderMemory@2x.png"; sourceTree = "<group>"; };
-		CDA3D2961723148E001482D9 /* ButtonActive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonActive.png; sourceTree = "<group>"; };
-		CDA3D2971723148E001482D9 /* ButtonActive@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ButtonActive@2x.png"; sourceTree = "<group>"; };
-		CDA3D2981723148E001482D9 /* ButtonPressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonPressed.png; sourceTree = "<group>"; };
-		CDA3D2991723148E001482D9 /* ButtonPressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ButtonPressed@2x.png"; sourceTree = "<group>"; };
 		CDA3D29F172322B7001482D9 /* SQMemoryHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQMemoryHelper.h; sourceTree = "<group>"; };
 		CDA3D2A0172322B7001482D9 /* SQMemoryHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQMemoryHelper.m; sourceTree = "<group>"; };
 		CDA3D2A617233116001482D9 /* SQViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQViewController.h; sourceTree = "<group>"; };
@@ -150,7 +142,6 @@
 		CDA3D265172312BC001482D9 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				CDA3D2951723148E001482D9 /* Buttons */,
 				CDA3D266172312BC001482D9 /* Default */,
 				CDA3D28C17231441001482D9 /* Header */,
 				CDA3D27B1723136B001482D9 /* Panels */,
@@ -224,17 +215,6 @@
 				CDA3D29017231441001482D9 /* HeaderMemory@2x.png */,
 			);
 			path = Header;
-			sourceTree = "<group>";
-		};
-		CDA3D2951723148E001482D9 /* Buttons */ = {
-			isa = PBXGroup;
-			children = (
-				CDA3D2961723148E001482D9 /* ButtonActive.png */,
-				CDA3D2971723148E001482D9 /* ButtonActive@2x.png */,
-				CDA3D2981723148E001482D9 /* ButtonPressed.png */,
-				CDA3D2991723148E001482D9 /* ButtonPressed@2x.png */,
-			);
-			path = Buttons;
 			sourceTree = "<group>";
 		};
 		CDA3D29E172322A5001482D9 /* Memory */ = {
@@ -357,10 +337,6 @@
 				CDA3D29217231441001482D9 /* HeaderDevice@2x.png in Resources */,
 				CDA3D29317231441001482D9 /* HeaderMemory.png in Resources */,
 				CDA3D29417231441001482D9 /* HeaderMemory@2x.png in Resources */,
-				CDA3D29A1723148E001482D9 /* ButtonActive.png in Resources */,
-				CDA3D29B1723148E001482D9 /* ButtonActive@2x.png in Resources */,
-				CDA3D29C1723148E001482D9 /* ButtonPressed.png in Resources */,
-				CDA3D29D1723148E001482D9 /* ButtonPressed@2x.png in Resources */,
 				CDA3D2AD17233116001482D9 /* SQViewController.xib in Resources */,
 				CDA3D2B917233CB7001482D9 /* Pattern.png in Resources */,
 				CDA3D2BA17233CB7001482D9 /* Pattern@2x.png in Resources */,
