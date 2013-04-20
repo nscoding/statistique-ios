@@ -14,13 +14,27 @@
 
 @implementation SQDeviceView
 
+// ------------------------------------------------------------------------------------------
+#pragma mark - Initializer
+// ------------------------------------------------------------------------------------------
+- (id)initWithFrame:(CGRect)frame
+{
+    if ((self = [super initWithFrame:frame]))
+    {
+        self.backgroundColor = [UIColor clearColor];
+    }
+    
+    return self;
+}
+
+
 
 // ------------------------------------------------------------------------------------------
 #pragma mark - Draw rect
 // ------------------------------------------------------------------------------------------
 - (void)drawRect:(CGRect)rect
 {
-    [[UIImage imageNamed:@"PanelDevice"] drawAtPoint:CGPointMake(0, 0)];
+    [[UIImage imageNamed:@"PanelDevice"] drawAtPoint:CGPointMake(0, 38)];
     [[UIImage imageNamed:@"HeaderDevice"] drawAtPoint:CGPointMake(40, 49)];
 }
 

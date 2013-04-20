@@ -33,6 +33,8 @@
 {
     if ((self = [super initWithFrame:frame]))
     {
+        self.backgroundColor = [UIColor clearColor];
+
         // instantiate the arrays
         progressIndicators = [[NSMutableArray alloc] init];
         valueLabels = [[NSMutableArray alloc] init];
@@ -122,7 +124,7 @@
 // ------------------------------------------------------------------------------------------
 - (void)drawRect:(CGRect)rect
 {
-    [[UIImage imageNamed:@"PanelMemory"] drawAtPoint:CGPointMake(0, 0)];
+    [[UIImage imageNamed:@"PanelMemory"] drawAtPoint:CGPointMake(0, 38)];
     [[UIImage imageNamed:@"HeaderMemory"] drawAtPoint:CGPointMake(40, 49)];
 }
 

@@ -69,12 +69,14 @@
                                              self.view.frame.size.height);
     
 
-    SQMemoryView *memoryView = [[SQMemoryView alloc] initWithFrame:self.view.bounds];
+    SQMemoryView *memoryView = [[SQMemoryView alloc] initWithFrame:CGRectMake(0, 50,
+                                                                              self.view.bounds.size.width,
+                                                                              self.view.bounds.size.height - 50)];
     [self.scrollView addSubview:memoryView];
 
-    SQDeviceView *deviceView = [[SQDeviceView alloc] initWithFrame:CGRectMake(self.view.bounds.size.width, 0,
+    SQDeviceView *deviceView = [[SQDeviceView alloc] initWithFrame:CGRectMake(self.view.bounds.size.width, 50,
                                                                               self.view.bounds.size.width,
-                                                                              self.view.bounds.size.height)];
+                                                                              self.view.bounds.size.height - 50)];
     
     [self.scrollView addSubview:deviceView];
 
@@ -96,7 +98,7 @@
     
     frame.size = sizeForControl;
     frame.origin = CGPointMake((self.view.frame.size.width / 2) - (sizeForControl.width / 2),
-                                self.view.frame.size.height - 50);
+                                [UIImage imageNamed:@"PanelDevice"].size.height + 100);
     
     self.pageControl.frame = frame;
     
