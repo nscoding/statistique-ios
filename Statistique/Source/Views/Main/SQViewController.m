@@ -61,7 +61,10 @@
 {
     self.scrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
     self.scrollView.delegate = self;
-    
+    self.scrollView.pagingEnabled = YES;
+    self.scrollView.showsHorizontalScrollIndicator = FALSE;
+    self.scrollView.showsVerticalScrollIndicator = FALSE;
+
     self.scrollView.contentSize = CGSizeMake(self.view.frame.size.width * 2,
                                              self.view.frame.size.height);
     
@@ -84,6 +87,10 @@
     self.pageControl = [[UIPageControl alloc] initWithFrame:CGRectZero];
     self.pageControl.numberOfPages = kLinesOfPages;
     
+    [self.pageControl addTarget:self
+                         action:@selector(changePage:)
+               forControlEvents:UIControlEventTouchUpInside];
+    
     CGSize sizeForControl = [self.pageControl sizeForNumberOfPages:kLinesOfPages];
     CGRect frame = self.pageControl.frame;
     
@@ -100,10 +107,26 @@
 // ------------------------------------------------------------------------------------------
 #pragma mark - Scroll View delegate
 // ------------------------------------------------------------------------------------------
-- (void)scrollViewDidEndDecelerating:(UIScrollView *)sender
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
-    NSInteger page = (sender.contentOffset.x / self.view.frame.size.width);
+    NSInteger page = ceil(scrollView.contentOffset.x / self.view.frame.size.width);
     [self.pageControl setCurrentPage:page];
+}
+
+
+// ------------------------------------------------------------------------------------------
+#pragma mark - Actions
+// ------------------------------------------------------------------------------------------
+- (IBAction)changePage:(UIPageControl *)sender
+{
+    NSInteger page = sender.currentPage;
+    CGFloat x = page * self.view.frame.size.width;
+    
+    [self.scrollView scrollRectToVisible:CGRectMake(x, 0,
+                                                    self.view.frame.size.width,
+                                                    self.view.frame.size.height)
+                                animated:YES];
+    
 }
 
 
