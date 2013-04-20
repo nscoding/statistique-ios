@@ -23,7 +23,7 @@
 
 + (NSUInteger)memoryForOption:(SQMemoryOption)option
 {
-	mach_port_t host_port;
+    mach_port_t host_port;
     mach_msg_type_number_t host_size;
     vm_size_t pagesize;
     
@@ -77,5 +77,37 @@
     return [NSString stringWithFormat:@"%.2u MB", [SQMemoryHelper memoryForOption:option] / 1024 / 1024];
 }
 
+
++ (NSString *)stringHeaderForOption:(SQMemoryOption)option
+{
+    switch (option)
+    {
+        case SQMemoryOptionFree:
+        {
+            return NSLocalizedString(@"Free", @"");
+        }
+            break;
+        case SQMemoryOptionInactive:
+        {
+            return NSLocalizedString(@"Inactive", @"");
+        }
+            break;
+        case SQMemoryOptionActive:
+        {
+            return NSLocalizedString(@"Active", @"");
+        }
+            break;
+        case SQMemoryOptionWired:
+        {
+            return NSLocalizedString(@"Wired", @"");
+        }
+            break;
+        case SQMemoryOptionAll:
+        {
+            return NSLocalizedString(@"All", @"");
+        }
+            break;
+    }
+}
 
 @end

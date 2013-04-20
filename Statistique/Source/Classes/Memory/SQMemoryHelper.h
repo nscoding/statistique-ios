@@ -21,5 +21,6 @@ typedef enum
 
 + (NSUInteger)memoryForOption:(SQMemoryOption)option;
 + (NSString *)stringMemoryForOption:(SQMemoryOption)option;
++ (NSString *)stringHeaderForOption:(SQMemoryOption)option;
 
 @end
