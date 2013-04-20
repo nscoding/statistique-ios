@@ -8,12 +8,16 @@
 
 #import "SQMemoryView.h"
 #import "SQMemoryHelper.h"
+#import "SQLabelFactory.h"
+#import "SQUtilities.h"
+
 
 // ------------------------------------------------------------------------------------------
 
 
 #define kNumberOfIndicators 4
 #define kProgressStartingY 119
+#define kBoldLabelStartingY 93
 
 
 // ------------------------------------------------------------------------------------------
@@ -29,31 +33,43 @@
 {
     if ((self = [super initWithFrame:frame]))
     {
+        // instantiate the arrays
         progressIndicators = [[NSMutableArray alloc] init];
         valueLabels = [[NSMutableArray alloc] init];
         
+        // build
         [self buildAndConfigure];
         
-        [NSTimer scheduledTimerWithTimeInterval:1.0
+        // schedule the timer
+        [[NSTimer scheduledTimerWithTimeInterval:1.0
                                          target:self
                                        selector:@selector(refreshMemory:)
                                        userInfo:nil
-                                        repeats:YES];
+                                        repeats:YES] fire];
     }
     
     return self;
 }
 
 
+// ------------------------------------------------------------------------------------------
+#pragma mark - Refresh memory
+// ------------------------------------------------------------------------------------------
 - (void)refreshMemory:(NSTimer *)timer
 {
+    // get the total
     float totalMemory = [SQMemoryHelper memoryForOption:SQMemoryOptionAll];
+    
+    // iterate thru the indicators
     for (NSInteger count = 0; count < kNumberOfIndicators; count++)
     {
-        UIProgressView *progressView =
-        [progressIndicators objectAtIndex:count];
+        // get the right indicator
+        UIProgressView *progressView = [progressIndicators objectAtIndex:count];
         
+        // get the memory for the current progress view
         NSUInteger memory = [SQMemoryHelper memoryForOption:count];
+        
+        // set the progress
         progressView.progress = (float) (memory / totalMemory);
     }
 }
@@ -66,6 +82,30 @@
 {
     for (NSInteger count = 0; count < kNumberOfIndicators; count++)
     {
+        UILabel *leftLabel = [SQLabelFactory boldLabelForString:[SQMemoryHelper stringHeaderForOption:count]];
+        
+        leftLabel.frame = CGRectMake(20, kBoldLabelStartingY + (count * 52),
+                                 leftLabel.frame.size.width,
+                                 leftLabel.frame.size.height);
+        
+        leftLabel.frame = [SQUtilities floorOriginForRect:leftLabel.frame];
+        
+        [self addSubview:leftLabel];
+        
+        
+        UILabel *rightLabel = [SQLabelFactory normalLabelForString:[SQMemoryHelper stringMemoryForOption:count]];
+        
+        rightLabel.frame = CGRectMake(self.frame.size.width - 20 - rightLabel.frame.size.width,
+                                      kBoldLabelStartingY + (count * 52),
+                                      rightLabel.frame.size.width,
+                                      rightLabel.frame.size.height);
+        
+        rightLabel.frame = [SQUtilities floorOriginForRect:rightLabel.frame];
+        
+        [self addSubview:rightLabel];
+
+        
+
         UIProgressView *progressView = [[UIProgressView alloc]
                                         initWithProgressViewStyle:UIProgressViewStyleBar];
         
@@ -83,6 +123,7 @@
 - (void)drawRect:(CGRect)rect
 {
     [[UIImage imageNamed:@"PanelMemory"] drawAtPoint:CGPointMake(0, 0)];
+    [[UIImage imageNamed:@"HeaderMemory"] drawAtPoint:CGPointMake(40, 49)];
 }
 
 

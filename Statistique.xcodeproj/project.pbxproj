@@ -36,6 +36,8 @@
 		CDA3D2B217233145001482D9 /* SQLabelFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA3D2B117233145001482D9 /* SQLabelFactory.m */; };
 		CDA3D2B917233CB7001482D9 /* Pattern.png in Resources */ = {isa = PBXBuildFile; fileRef = CDA3D2B717233CB7001482D9 /* Pattern.png */; };
 		CDA3D2BA17233CB7001482D9 /* Pattern@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CDA3D2B817233CB7001482D9 /* Pattern@2x.png */; };
+		CDA3D2BE1723403E001482D9 /* SQUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA3D2BD1723403E001482D9 /* SQUtilities.m */; };
+		CDA3D2C2172342BD001482D9 /* SQDeviceView.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA3D2C1172342BD001482D9 /* SQDeviceView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +78,10 @@
 		CDA3D2B117233145001482D9 /* SQLabelFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQLabelFactory.m; sourceTree = "<group>"; };
 		CDA3D2B717233CB7001482D9 /* Pattern.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pattern.png; sourceTree = "<group>"; };
 		CDA3D2B817233CB7001482D9 /* Pattern@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Pattern@2x.png"; sourceTree = "<group>"; };
+		CDA3D2BC1723403E001482D9 /* SQUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQUtilities.h; sourceTree = "<group>"; };
+		CDA3D2BD1723403E001482D9 /* SQUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQUtilities.m; sourceTree = "<group>"; };
+		CDA3D2C0172342BD001482D9 /* SQDeviceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQDeviceView.h; sourceTree = "<group>"; };
+		CDA3D2C1172342BD001482D9 /* SQDeviceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQDeviceView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +174,7 @@
 			children = (
 				CDA3D26B172312BC001482D9 /* Application Delegate */,
 				CDA3D29E172322A5001482D9 /* Memory */,
+				CDA3D2BB17234032001482D9 /* Helpers */,
 				CDA3D2AF17233132001482D9 /* Factory */,
 				CDA3D26E172312BC001482D9 /* SQMain.m */,
 			);
@@ -187,6 +194,7 @@
 		CDA3D26F172312BC001482D9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CDA3D2BF172342AA001482D9 /* Device */,
 				CDA3D2A517233116001482D9 /* Main */,
 				CDA3D2A917233116001482D9 /* Memory */,
 			);
@@ -264,6 +272,24 @@
 				CDA3D2B117233145001482D9 /* SQLabelFactory.m */,
 			);
 			path = Factory;
+			sourceTree = "<group>";
+		};
+		CDA3D2BB17234032001482D9 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				CDA3D2BC1723403E001482D9 /* SQUtilities.h */,
+				CDA3D2BD1723403E001482D9 /* SQUtilities.m */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		CDA3D2BF172342AA001482D9 /* Device */ = {
+			isa = PBXGroup;
+			children = (
+				CDA3D2C0172342BD001482D9 /* SQDeviceView.h */,
+				CDA3D2C1172342BD001482D9 /* SQDeviceView.m */,
+			);
+			path = Device;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -354,6 +380,8 @@
 				CDA3D2AC17233116001482D9 /* SQViewController.m in Sources */,
 				CDA3D2AE17233116001482D9 /* SQMemoryView.m in Sources */,
 				CDA3D2B217233145001482D9 /* SQLabelFactory.m in Sources */,
+				CDA3D2BE1723403E001482D9 /* SQUtilities.m in Sources */,
+				CDA3D2C2172342BD001482D9 /* SQDeviceView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

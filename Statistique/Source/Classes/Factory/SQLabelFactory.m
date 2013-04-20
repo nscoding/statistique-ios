@@ -17,13 +17,36 @@
 
 + (UILabel *)boldLabelForString:(NSString *)text
 {
-    return nil;
+    UILabel *label = [SQLabelFactory labelForString:text];
+    [label setFont:[UIFont fontWithName:@"HelveticaNeue-Bold" size:15]];
+    [label setTextAlignment:NSTextAlignmentLeft];
+    
+    return label;
 }
 
 
 + (UILabel *)normalLabelForString:(NSString *)text
 {
-    return nil;
+    UILabel *label = [SQLabelFactory labelForString:text];
+    [label setFont:[UIFont fontWithName:@"HelveticaNeue" size:14]];
+    [label setTextAlignment:NSTextAlignmentRight];
+
+    return label;
+}
+
+
++ (UILabel *)labelForString:(NSString *)text
+{
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectZero];
+    [label setBackgroundColor:[UIColor clearColor]];
+    [label setTextColor:[UIColor colorWithRed:0.839f green:0.839f blue:0.839f alpha:1.00f]];
+    [label setShadowColor:[UIColor colorWithWhite:0.0 alpha:1.0]];
+    [label setShadowOffset:CGSizeMake(0, 1)];
+    [label setText:text];
+    [label setNumberOfLines:0];
+    [label sizeToFit];
+
+    return label;
 }
 
 

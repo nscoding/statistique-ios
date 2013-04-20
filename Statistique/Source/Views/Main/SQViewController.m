@@ -8,6 +8,7 @@
 
 #import "SQViewController.h"
 #import "SQMemoryView.h"
+#import "SQDeviceView.h"
 
 
 // ------------------------------------------------------------------------------------------
@@ -64,9 +65,16 @@
     self.scrollView.contentSize = CGSizeMake(self.view.frame.size.width * 2,
                                              self.view.frame.size.height);
     
+
     SQMemoryView *memoryView = [[SQMemoryView alloc] initWithFrame:self.view.bounds];
     [self.scrollView addSubview:memoryView];
+
+    SQDeviceView *deviceView = [[SQDeviceView alloc] initWithFrame:CGRectMake(self.view.bounds.size.width, 0,
+                                                                              self.view.bounds.size.width,
+                                                                              self.view.bounds.size.height)];
     
+    [self.scrollView addSubview:deviceView];
+
     [self.view addSubview:self.scrollView];
 }
 
