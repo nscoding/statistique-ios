@@ -6,7 +6,6 @@
 //  Copyright (c) 2013 Patrick Chamelo - nscoding. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 
 @interface SQViewController : UIViewController <UIScrollViewDelegate>
 

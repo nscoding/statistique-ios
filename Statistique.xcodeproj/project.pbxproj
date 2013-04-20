@@ -31,6 +31,7 @@
 		CDA3D29B1723148E001482D9 /* ButtonActive@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CDA3D2971723148E001482D9 /* ButtonActive@2x.png */; };
 		CDA3D29C1723148E001482D9 /* ButtonPressed.png in Resources */ = {isa = PBXBuildFile; fileRef = CDA3D2981723148E001482D9 /* ButtonPressed.png */; };
 		CDA3D29D1723148E001482D9 /* ButtonPressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CDA3D2991723148E001482D9 /* ButtonPressed@2x.png */; };
+		CDA3D2A1172322B7001482D9 /* SQMemoryHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA3D2A0172322B7001482D9 /* SQMemoryHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +64,8 @@
 		CDA3D2971723148E001482D9 /* ButtonActive@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ButtonActive@2x.png"; sourceTree = "<group>"; };
 		CDA3D2981723148E001482D9 /* ButtonPressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonPressed.png; sourceTree = "<group>"; };
 		CDA3D2991723148E001482D9 /* ButtonPressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ButtonPressed@2x.png"; sourceTree = "<group>"; };
+		CDA3D29F172322B7001482D9 /* SQMemoryHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQMemoryHelper.h; sourceTree = "<group>"; };
+		CDA3D2A0172322B7001482D9 /* SQMemoryHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQMemoryHelper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				CDA3D26B172312BC001482D9 /* Application Delegate */,
+				CDA3D29E172322A5001482D9 /* Memory */,
 				CDA3D26E172312BC001482D9 /* SQMain.m */,
 			);
 			name = Classes;
@@ -219,6 +223,15 @@
 				CDA3D2991723148E001482D9 /* ButtonPressed@2x.png */,
 			);
 			path = Buttons;
+			sourceTree = "<group>";
+		};
+		CDA3D29E172322A5001482D9 /* Memory */ = {
+			isa = PBXGroup;
+			children = (
+				CDA3D29F172322B7001482D9 /* SQMemoryHelper.h */,
+				CDA3D2A0172322B7001482D9 /* SQMemoryHelper.m */,
+			);
+			path = Memory;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,6 +317,7 @@
 				CDA3D277172312BC001482D9 /* SQAppDelegate.m in Sources */,
 				CDA3D278172312BC001482D9 /* SQMain.m in Sources */,
 				CDA3D279172312BC001482D9 /* SQViewController.m in Sources */,
+				CDA3D2A1172322B7001482D9 /* SQMemoryHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
