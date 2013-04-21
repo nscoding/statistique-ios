@@ -43,6 +43,7 @@
     [label setShadowColor:[UIColor colorWithWhite:0.0 alpha:1.0]];
     [label setShadowOffset:CGSizeMake(0, 1)];
     [label setText:text];
+    [label setLineBreakMode:NSLineBreakByWordWrapping];
     [label setNumberOfLines:0];
     [label sizeToFit];
 

@@ -174,14 +174,16 @@
 
 - (void)buildAndConfigureFooter
 {
-    self.footerLabel = [SQLabelFactory normalLabelForString:@"Close some apps to free up your memory..."];
+    self.footerLabel = [SQLabelFactory normalLabelForString:@"You can close some applications to free up your memory..."];
     self.footerLabel.font = [UIFont fontWithName:@"HelveticaNeue-Medium" size:13];
     self.footerLabel.textAlignment = NSTextAlignmentCenter;
-    [self.footerLabel sizeToFit];
     
-    self.footerLabel.frame = CGRectMake(20, self.view.frame.size.height - self.footerLabel.frame.size.height - 20,
-                                            self.view.frame.size.width - 40,
-                                            self.footerLabel.frame.size.height);
+    CGSize size = [self.footerLabel sizeThatFits:CGSizeMake(self.view.frame.size.width - 100, FLT_MAX)];
+    
+    self.footerLabel.frame = CGRectMake(50,
+                                        self.view.frame.size.height - size.height - 20,
+                                        self.view.frame.size.width - 100,
+                                        size.height);
     
     self.footerLabel.alpha = 0.0f;
     [self.view addSubview:self.footerLabel];
@@ -223,6 +225,14 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+// ------------------------------------------------------------------------------------------
+#pragma mark - Dealloc
+// ------------------------------------------------------------------------------------------
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObject:self];
+}
 
 
 @end
