@@ -437,10 +437,15 @@
 		CDA3D24417231036001482D9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Patrick CHAMELO (4S7SPYVR8G)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Patrick CHAMELO (4S7SPYVR8G)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Statistique/Statistique-Prefix.pch";
 				INFOPLIST_FILE = "Statistique/Statistique-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "076AF2E2-7B7E-456D-AE89-1AEF44F83902";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "076AF2E2-7B7E-456D-AE89-1AEF44F83902";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -448,10 +453,15 @@
 		CDA3D24517231036001482D9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Patrick CHAMELO";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Patrick CHAMELO (4S7SPYVR8G)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Statistique/Statistique-Prefix.pch";
 				INFOPLIST_FILE = "Statistique/Statistique-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "A79650C4-42B3-4237-AA6A-1037F83AA848";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "076AF2E2-7B7E-456D-AE89-1AEF44F83902";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
