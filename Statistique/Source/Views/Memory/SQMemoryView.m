@@ -62,9 +62,22 @@
     // get the total
     float totalMemory = [SQMemoryHelper memoryForOption:SQMemoryOptionAll];
     
+    
     // iterate thru the indicators
     for (NSInteger count = 0; count < kNumberOfIndicators; count++)
     {
+        UILabel *rightLabel = [valueLabels objectAtIndex:count];
+        rightLabel.text = [SQMemoryHelper stringMemoryForOption:count];
+        [rightLabel sizeToFit];
+        
+        rightLabel.frame = CGRectMake(self.frame.size.width - 20 - rightLabel.frame.size.width,
+                                      kBoldLabelStartingY + (count * 52),
+                                      rightLabel.frame.size.width,
+                                      rightLabel.frame.size.height);
+        
+        rightLabel.frame = [SQUtilities floorOriginForRect:rightLabel.frame];
+
+        
         // get the right indicator
         UIProgressView *progressView = [progressIndicators objectAtIndex:count];
         
@@ -105,7 +118,7 @@
         rightLabel.frame = [SQUtilities floorOriginForRect:rightLabel.frame];
         
         [self addSubview:rightLabel];
-
+        [valueLabels addObject:rightLabel];
         
 
         UIProgressView *progressView = [[UIProgressView alloc]
