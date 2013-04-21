@@ -7,9 +7,19 @@
 //
 
 #import "SQDeviceView.h"
+#import "SQLabelFactory.h"
+#import "SQUtilities.h"
+#import "SQDeviceHelper.h"
 
 
 // ------------------------------------------------------------------------------------------
+
+
+#define kBoldLabelStartingY 93
+
+
+// ------------------------------------------------------------------------------------------
+
 
 
 @implementation SQDeviceView
@@ -23,18 +33,43 @@
     {
         self.backgroundColor = [UIColor clearColor];
 
-    
-//        @property(nonatomic,readonly,retain) NSString    *name;              // e.g. "My iPhone"
-//        @property(nonatomic,readonly,retain) NSString    *model;             // e.g. @"iPhone", @"iPod touch"
-//        @property(nonatomic,readonly,retain) NSString    *localizedModel;    // localized version of model
-//        @property(nonatomic,readonly,retain) NSString    *systemName;        // e.g. @"iOS"
-//        @property(nonatomic,readonly,retain) NSString    *systemVersion;     // e.g. @"4.0"
-
+        [self buildAndConfigure];
     }
     
     return self;
 }
 
+
+// ------------------------------------------------------------------------------------------
+#pragma mark - Build and Configure
+// ------------------------------------------------------------------------------------------
+- (void)buildAndConfigure
+{
+    for (NSInteger count = 0; count < 5; count++)
+    {
+        UILabel *leftLabel = [SQLabelFactory boldLabelForString:[SQDeviceHelper titleForRow:count]];
+        
+        leftLabel.frame = CGRectMake(20, kBoldLabelStartingY + (count * 27),
+                                     leftLabel.frame.size.width,
+                                     leftLabel.frame.size.height);
+        
+        leftLabel.frame = [SQUtilities floorOriginForRect:leftLabel.frame];
+        
+        [self addSubview:leftLabel];
+        
+        
+        UILabel *rightLabel = [SQLabelFactory normalLabelForString:[SQDeviceHelper deviceInformationForRow:count]];
+        
+        rightLabel.frame = CGRectMake(self.frame.size.width - 20 - rightLabel.frame.size.width,
+                                      kBoldLabelStartingY + (count * 27),
+                                      rightLabel.frame.size.width,
+                                      rightLabel.frame.size.height);
+        
+        rightLabel.frame = [SQUtilities floorOriginForRect:rightLabel.frame];
+        
+        [self addSubview:rightLabel];
+    }
+}
 
 
 // ------------------------------------------------------------------------------------------
