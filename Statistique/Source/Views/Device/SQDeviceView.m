@@ -34,9 +34,51 @@
         self.backgroundColor = [UIColor clearColor];
 
         [self buildAndConfigure];
+        
+        // schedule the timer
+        [[NSTimer scheduledTimerWithTimeInterval:1.0
+                                          target:self
+                                        selector:@selector(refreshBattery:)
+                                        userInfo:nil
+                                         repeats:YES] fire];
+
     }
     
     return self;
+}
+
+
+// ------------------------------------------------------------------------------------------
+#pragma mark - Refresh memory
+// ------------------------------------------------------------------------------------------
+- (void)refreshBattery:(NSTimer *)timer
+{
+    self.batteryPercentageLabel.text = [SQDeviceHelper batteryPercetangeString];
+    [self.batteryPercentageLabel sizeToFit];
+    self.batteryPercentageLabel.frame = CGRectMake(self.frame.size.width - 20 -
+                                                   self.batteryPercentageLabel.frame.size.width, 230,
+                                                   self.batteryPercentageLabel.frame.size.width,
+                                                   self.batteryPercentageLabel.frame.size.height);
+    self.batteryPercentageLabel.frame = [SQUtilities floorOriginForRect:self.batteryPercentageLabel.frame];
+
+	
+	if ([[UIDevice currentDevice] batteryState] == UIDeviceBatteryStateCharging)
+    {
+		[self.batteryProgressView setProgress:chargeFactor];
+        
+        // simulate charging
+		chargeFactor = 	chargeFactor + 0.05f;
+        
+        // stay a bit on 100% and start over
+		if (chargeFactor > 1.10f)
+        {
+            chargeFactor = 0.0f;
+        }
+	}
+	else
+    {
+        [self.batteryProgressView setProgress:[SQDeviceHelper batteryLeft]];
+	}
 }
 
 
@@ -59,7 +101,6 @@
         
         
         UILabel *rightLabel = [SQLabelFactory normalLabelForString:[SQDeviceHelper deviceInformationForRow:count]];
-        
         rightLabel.frame = CGRectMake(self.frame.size.width - 20 - rightLabel.frame.size.width,
                                       kBoldLabelStartingY + (count * 27),
                                       rightLabel.frame.size.width,
@@ -69,6 +110,33 @@
         
         [self addSubview:rightLabel];
     }
+    
+    
+    // add the battery title label
+    UILabel *batteryLabel = [SQLabelFactory boldLabelForString:@"Battery"];
+    batteryLabel.frame = CGRectMake(20, 230,
+                                 batteryLabel.frame.size.width,
+                                 batteryLabel.frame.size.height);
+    
+    batteryLabel.frame = [SQUtilities floorOriginForRect:batteryLabel.frame];
+    
+    [self addSubview:batteryLabel];
+    
+    // add the battery label
+    self.batteryPercentageLabel = [SQLabelFactory normalLabelForString:[SQDeviceHelper batteryPercetangeString]];
+    self.batteryPercentageLabel.frame = CGRectMake(self.frame.size.width - 20 -
+                                                   self.batteryPercentageLabel.frame.size.width, 230,
+                                                   self.batteryPercentageLabel.frame.size.width,
+                                                   self.batteryPercentageLabel.frame.size.height);
+                    
+    self.batteryPercentageLabel.frame = [SQUtilities floorOriginForRect:self.batteryPercentageLabel.frame];
+    [self addSubview:self.batteryPercentageLabel];
+
+    // add the battery bar
+    self.batteryProgressView = [[UIProgressView alloc]
+                                    initWithProgressViewStyle:UIProgressViewStyleBar];
+    self.batteryProgressView.frame = CGRectMake(20, 260, 280, 11);
+    [self addSubview:self.batteryProgressView];
 }
 
 

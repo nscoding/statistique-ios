@@ -62,4 +62,29 @@
     return @"";
 }
 
+
++ (CGFloat)batteryPercetange
+{
+    [UIDevice currentDevice].batteryMonitoringEnabled = YES;
+    CGFloat batteryLevel = [[UIDevice currentDevice] batteryLevel];
+    CGFloat batteryPercent = (batteryLevel * 100);
+    
+    return batteryPercent;
+}
+
+
++ (CGFloat)batteryLeft
+{
+    CGFloat batteryPercetange = [SQDeviceHelper batteryPercetange];
+    CGFloat batteryLeft = batteryPercetange / 100;
+    
+    return batteryLeft;
+}
+
+
++ (NSString *)batteryPercetangeString
+{
+    return [NSString stringWithFormat:@"%i%%",(int)[SQDeviceHelper batteryPercetange]];
+}
+
 @end

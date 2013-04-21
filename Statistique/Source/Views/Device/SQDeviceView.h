@@ -6,8 +6,13 @@
 //  Copyright (c) 2013 Patrick Chamelo - nscoding. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 
 @interface SQDeviceView : UIView
+{
+    CGFloat chargeFactor;
+}
+
+@property (nonatomic, strong) UIProgressView *batteryProgressView;
+@property (nonatomic, strong) UILabel *batteryPercentageLabel;
 
 @end

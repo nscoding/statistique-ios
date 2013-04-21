@@ -13,4 +13,8 @@
 + (NSString *)titleForRow:(NSUInteger)row;
 + (NSString *)deviceInformationForRow:(NSUInteger)row;
 
++ (CGFloat)batteryPercetange;
++ (CGFloat)batteryLeft;
++ (NSString *)batteryPercetangeString;
+
 @end
