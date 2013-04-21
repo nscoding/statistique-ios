@@ -9,6 +9,7 @@
 #import "SQViewController.h"
 #import "SQMemoryView.h"
 #import "SQDeviceView.h"
+#import "SQLabelFactory.h"
 
 
 // ------------------------------------------------------------------------------------------
@@ -41,9 +42,46 @@
 {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"Pattern"]];
-    
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"Pattern"]];    
     [self buildAndConfigure];
+    
+    [self registerObservers];
+}
+
+
+
+
+// ------------------------------------------------------------------------------------------
+#pragma mark - Register observers
+// ------------------------------------------------------------------------------------------
+- (void)registerObservers
+{
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(applicationWillResignActive:)
+                                                 name:UIApplicationWillResignActiveNotification
+                                               object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(applicationDidBecomeActive:)
+                                                 name:UIApplicationDidBecomeActiveNotification
+                                               object:nil];
+}
+
+
+
+- (void)applicationWillResignActive:(UIApplication *)application
+{
+    [UIView animateWithDuration:0.4f animations:^{
+        self.footerLabel.alpha = 1.0f;
+    }];
+}
+
+
+- (void)applicationDidBecomeActive:(UIApplication *)application
+{
+    [UIView animateWithDuration:0.4f animations:^{
+        self.footerLabel.alpha = 0.0f;
+    }];
 }
 
 
@@ -55,6 +93,7 @@
     [self buildAndConfigureScrollView];
     [self buildAndConfigurePageControl];
     [self buildAndConfigureMadeWithLove];
+    [self buildAndConfigureFooter];
 }
 
 
@@ -73,7 +112,6 @@
     self.scrollView.contentSize = CGSizeMake(self.view.frame.size.width * kNumberOfPages,
                                              self.view.frame.size.height);
     
-
     CGRect frame = CGRectMake(0, 50,
                               self.view.bounds.size.width,
                               self.view.bounds.size.height - 50);
@@ -117,18 +155,36 @@
 - (void)buildAndConfigureMadeWithLove
 {
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectZero];
-    [label setBackgroundColor:[UIColor clearColor]];
-    [label setFont:[UIFont fontWithName:@"HelveticaNeue-Light" size:13]];
-    [label setTextColor:[UIColor colorWithRed:0.839f green:0.839f blue:0.839f alpha:1.00f]];
-    [label setShadowColor:[UIColor colorWithWhite:0.3 alpha:1.0]];
-    [label setShadowOffset:CGSizeMake(0, 1)];
-    [label setTextAlignment:NSTextAlignmentCenter];
-    [label setText:@"Made in Berlin with Love\n❝Patrick Chamelo❞"];
-    [label setNumberOfLines:0];
+    label.backgroundColor = [UIColor clearColor];
+    label.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:13];
+    label.textColor = [UIColor colorWithRed:0.839f green:0.839f blue:0.839f alpha:1.00f];
+    label.shadowColor = [UIColor colorWithWhite:0.3 alpha:1.0];
+    label.shadowOffset = CGSizeMake(0, 1);
+    label.textAlignment = NSTextAlignmentCenter;
+    label.text =  @"Made in Berlin with Love\n❝Patrick Chamelo❞";
+    label.numberOfLines = 0;
+    
     [label sizeToFit];
     [label setTransform:CGAffineTransformMakeRotation(-M_PI / 2)];
     [label setCenter:CGPointMake(self.scrollView.contentSize.width + 50, self.view.center.y)];
+    
     [self.scrollView addSubview:label];
+}
+
+
+- (void)buildAndConfigureFooter
+{
+    self.footerLabel = [SQLabelFactory normalLabelForString:@"Close some apps to free up your memory..."];
+    self.footerLabel.font = [UIFont fontWithName:@"HelveticaNeue-Medium" size:13];
+    self.footerLabel.textAlignment = NSTextAlignmentCenter;
+    [self.footerLabel sizeToFit];
+    
+    self.footerLabel.frame = CGRectMake(20, self.view.frame.size.height - self.footerLabel.frame.size.height - 20,
+                                            self.view.frame.size.width - 40,
+                                            self.footerLabel.frame.size.height);
+    
+    self.footerLabel.alpha = 0.0f;
+    [self.view addSubview:self.footerLabel];
 }
 
 

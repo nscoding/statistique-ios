@@ -12,5 +12,4 @@
     NSMutableArray *progressIndicators;
     NSMutableArray *valueLabels;
 }
-
 @end

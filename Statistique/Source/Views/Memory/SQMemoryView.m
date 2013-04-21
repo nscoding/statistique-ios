@@ -95,13 +95,19 @@
 // ------------------------------------------------------------------------------------------
 - (void)buildAndConfigure
 {
+    [self buildAndConfigureProgressIndicators];
+}
+
+
+- (void)buildAndConfigureProgressIndicators
+{
     for (NSInteger count = 0; count < kNumberOfIndicators; count++)
     {
         UILabel *leftLabel = [SQLabelFactory boldLabelForString:[SQMemoryHelper stringHeaderForOption:count]];
         
         leftLabel.frame = CGRectMake(20, kBoldLabelStartingY + (count * 52),
-                                 leftLabel.frame.size.width,
-                                 leftLabel.frame.size.height);
+                                     leftLabel.frame.size.width,
+                                     leftLabel.frame.size.height);
         
         leftLabel.frame = [SQUtilities floorOriginForRect:leftLabel.frame];
         
@@ -120,12 +126,12 @@
         [self addSubview:rightLabel];
         [valueLabels addObject:rightLabel];
         
-
+        
         UIProgressView *progressView = [[UIProgressView alloc]
                                         initWithProgressViewStyle:UIProgressViewStyleBar];
         
         progressView.frame = CGRectMake(20, kProgressStartingY + (count * 52), 280, 11);
-
+        
         [self addSubview:progressView];
         [progressIndicators addObject:progressView];
     }
