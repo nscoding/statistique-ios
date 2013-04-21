@@ -54,6 +54,7 @@
 {
     [self buildAndConfigureScrollView];
     [self buildAndConfigurePageControl];
+    [self buildAndConfigureMadeWithLove];
 }
 
 
@@ -85,7 +86,7 @@
     frame.origin.x = self.view.bounds.size.width;
     SQDeviceView *deviceView = [[SQDeviceView alloc] initWithFrame:frame];
     [self.scrollView addSubview:deviceView];
-
+    
     // add the scroll view
     [self.view addSubview:self.scrollView];
 }
@@ -110,6 +111,24 @@
     self.pageControl.frame = frame;
     
     [self.view addSubview:self.pageControl];
+}
+
+
+- (void)buildAndConfigureMadeWithLove
+{
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectZero];
+    [label setBackgroundColor:[UIColor clearColor]];
+    [label setFont:[UIFont fontWithName:@"HelveticaNeue-Light" size:13]];
+    [label setTextColor:[UIColor colorWithRed:0.839f green:0.839f blue:0.839f alpha:1.00f]];
+    [label setShadowColor:[UIColor colorWithWhite:0.3 alpha:1.0]];
+    [label setShadowOffset:CGSizeMake(0, 1)];
+    [label setTextAlignment:NSTextAlignmentCenter];
+    [label setText:@"Made in Berlin with Love\n❝Patrick Chamelo❞"];
+    [label setNumberOfLines:0];
+    [label sizeToFit];
+    [label setTransform:CGAffineTransformMakeRotation(-M_PI / 2)];
+    [label setCenter:CGPointMake(self.scrollView.contentSize.width + 50, self.view.center.y)];
+    [self.scrollView addSubview:label];
 }
 
 

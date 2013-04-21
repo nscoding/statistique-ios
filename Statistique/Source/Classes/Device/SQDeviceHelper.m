@@ -7,7 +7,7 @@
 //
 
 #import "SQDeviceHelper.h"
-
+#import "SQUtilities.h"
 
 // ------------------------------------------------------------------------------------------
 
@@ -30,8 +30,7 @@
             break;
         case 3:
             return NSLocalizedString(@"System Version", @"");
-            break;
-            
+            break;     
         default:
             break;
     }
@@ -56,31 +55,11 @@
         case 3:
             return [[UIDevice currentDevice] systemVersion];
             break;
-            
         default:
             break;
     }
     
     return @"";
 }
-
-
-
-
-- (NSNumber *)totalDiskSpace
-{
-    NSDictionary *fattributes = [[NSFileManager defaultManager]
-                                 attributesOfFileSystemForPath:NSHomeDirectory() error:nil];
-    return [fattributes objectForKey:NSFileSystemSize];
-}
-
-
-- (NSNumber *)freeDiskSpace
-{
-    NSDictionary *fattributes = [[NSFileManager defaultManager]
-                                 attributesOfFileSystemForPath:NSHomeDirectory() error:nil];
-    return [fattributes objectForKey:NSFileSystemFreeSize];
-}
-
 
 @end
