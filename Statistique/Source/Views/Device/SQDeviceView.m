@@ -54,11 +54,11 @@
 - (void)refreshBattery:(NSTimer *)timer
 {
     self.batteryPercentageLabel.text = [SQDeviceHelper batteryPercetangeString];
-    [self.batteryPercentageLabel sizeToFit];
+    CGSize batterySize = [self.batteryPercentageLabel sizeThatFits:CGSizeMake(FLT_MAX, FLT_MAX)];
     self.batteryPercentageLabel.frame = CGRectMake(self.frame.size.width - 20 -
-                                                   self.batteryPercentageLabel.frame.size.width, 230,
-                                                   self.batteryPercentageLabel.frame.size.width,
-                                                   self.batteryPercentageLabel.frame.size.height);
+                                                   batterySize.width, 230,
+                                                   batterySize.width,
+                                                   batterySize.height);
     self.batteryPercentageLabel.frame = [SQUtilities floorOriginForRect:self.batteryPercentageLabel.frame];
 
 	
