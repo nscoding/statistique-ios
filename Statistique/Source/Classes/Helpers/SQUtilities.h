@@ -13,5 +13,6 @@
 + (CGRect)floorOriginForRect:(CGRect)rect;
 + (CGRect)ceilRect:(CGRect)rect;
 + (CGRect)ceilOriginForRect:(CGRect)rect;
++ (CGRect)screenRect;
 
 @end

@@ -68,12 +68,13 @@
     {
         UILabel *rightLabel = [valueLabels objectAtIndex:count];
         rightLabel.text = [SQMemoryHelper stringMemoryForOption:count];
-        [rightLabel sizeToFit];
         
-        rightLabel.frame = CGRectMake(self.frame.size.width - 20 - rightLabel.frame.size.width,
+        CGSize rightSize = [rightLabel sizeThatFits:CGSizeMake(FLT_MAX, 30)];
+        
+        rightLabel.frame = CGRectMake(self.frame.size.width - 20 - rightSize.width,
                                       kBoldLabelStartingY + (count * 52),
-                                      rightLabel.frame.size.width,
-                                      rightLabel.frame.size.height);
+                                      rightSize.width,
+                                      rightSize.height);
         
         rightLabel.frame = [SQUtilities floorOriginForRect:rightLabel.frame];
 

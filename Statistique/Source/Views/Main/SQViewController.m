@@ -10,6 +10,7 @@
 #import "SQMemoryView.h"
 #import "SQDeviceView.h"
 #import "SQLabelFactory.h"
+#import "SQUtilities.h"
 
 
 // ------------------------------------------------------------------------------------------
@@ -180,9 +181,11 @@
     
     CGSize size = [self.footerLabel sizeThatFits:CGSizeMake(self.view.frame.size.width - 100, FLT_MAX)];
     
+    CGRect screenRect = [SQUtilities screenRect];
+    
     self.footerLabel.frame = CGRectMake(50,
-                                        self.view.frame.size.height - size.height - 20,
-                                        self.view.frame.size.width - 100,
+                                        screenRect.size.height - size.height - 30,
+                                        screenRect.size.width - 100,
                                         size.height);
     
     self.footerLabel.alpha = 0.0f;

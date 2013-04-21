@@ -51,4 +51,11 @@
 }
 
 
++ (CGRect)screenRect
+{
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+    return screenRect;
+}
+
+
 @end
