@@ -7,13 +7,15 @@
 //
 
 #import "SQAppDelegate.h"
-
+#import "TestFlight.h"
 #import "SQViewController.h"
 
 @implementation SQAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [TestFlight takeOff:@"4271bc9a-cbf6-453f-8138-0de102d1f91c"];
+
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.viewController = [[SQViewController alloc] initWithNibName:@"SQViewController" bundle:nil];
