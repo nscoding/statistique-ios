@@ -397,7 +397,55 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		CDA3D24117231036001482D9 /* Debug */ = {
+		CD767346172528AB00F44AC1 /* Adhoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Patrick CHAMELO";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Patrick CHAMELO";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "9E31C529-3A24-4750-BAFF-6B355D28DAE3";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "9E31C529-3A24-4750-BAFF-6B355D28DAE3";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Adhoc;
+		};
+		CD767347172528AB00F44AC1 /* Adhoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Patrick CHAMELO";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Patrick CHAMELO";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Statistique/Statistique-Prefix.pch";
+				INFOPLIST_FILE = "Statistique/Statistique-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Statistique/Source/Libraries\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "A79650C4-42B3-4237-AA6A-1037F83AA848";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "A79650C4-42B3-4237-AA6A-1037F83AA848";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Adhoc;
+		};
+		CDA3D24117231036001482D9 /* Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -429,9 +477,9 @@
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "65E21223-C005-4E89-8836-120DD4D453B5";
 				SDKROOT = iphoneos;
 			};
-			name = Debug;
+			name = Development;
 		};
-		CDA3D24217231036001482D9 /* Release */ = {
+		CDA3D24217231036001482D9 /* App Store */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -457,9 +505,9 @@
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
-			name = Release;
+			name = "App Store";
 		};
-		CDA3D24417231036001482D9 /* Debug */ = {
+		CDA3D24417231036001482D9 /* Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer: Patrick CHAMELO (4S7SPYVR8G)";
@@ -477,9 +525,9 @@
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "65E21223-C005-4E89-8836-120DD4D453B5";
 				WRAPPER_EXTENSION = app;
 			};
-			name = Debug;
+			name = Development;
 		};
-		CDA3D24517231036001482D9 /* Release */ = {
+		CDA3D24517231036001482D9 /* App Store */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Patrick CHAMELO";
@@ -497,7 +545,7 @@
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "A79650C4-42B3-4237-AA6A-1037F83AA848";
 				WRAPPER_EXTENSION = app;
 			};
-			name = Release;
+			name = "App Store";
 		};
 /* End XCBuildConfiguration section */
 
@@ -505,20 +553,22 @@
 		CDA3D21B17231036001482D9 /* Build configuration list for PBXProject "Statistique" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CDA3D24117231036001482D9 /* Debug */,
-				CDA3D24217231036001482D9 /* Release */,
+				CDA3D24117231036001482D9 /* Development */,
+				CDA3D24217231036001482D9 /* App Store */,
+				CD767346172528AB00F44AC1 /* Adhoc */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Development;
 		};
 		CDA3D24317231036001482D9 /* Build configuration list for PBXNativeTarget "Statistique" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CDA3D24417231036001482D9 /* Debug */,
-				CDA3D24517231036001482D9 /* Release */,
+				CDA3D24417231036001482D9 /* Development */,
+				CDA3D24517231036001482D9 /* App Store */,
+				CD767347172528AB00F44AC1 /* Adhoc */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Development;
 		};
 /* End XCConfigurationList section */
 	};
