@@ -6,8 +6,9 @@
 //  Copyright (c) 2013 Patrick Chamelo - nscoding. All rights reserved.
 //
 
+#import "SQBaseView.h"
 
-@interface SQDeviceView : UIView
+@interface SQDeviceView : SQBaseView
 {
     CGFloat chargeFactor;
 }

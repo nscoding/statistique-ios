@@ -43,7 +43,9 @@
 {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"Pattern"]];    
+    [self.view setFrame:[[UIScreen mainScreen] applicationFrame]];
+
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"Pattern"]];
     [self buildAndConfigure];
     
     [self registerObservers];
@@ -74,6 +76,7 @@
 {
     [UIView animateWithDuration:0.4f animations:^{
         self.footerLabel.alpha = 1.0f;
+        self.pageControl.alpha = 0.0f;
     }];
 }
 
@@ -82,6 +85,7 @@
 {
     [UIView animateWithDuration:0.4f animations:^{
         self.footerLabel.alpha = 0.0f;
+        self.pageControl.alpha = 1.0f;
     }];
 }
 
@@ -181,11 +185,9 @@
     
     CGSize size = [self.footerLabel sizeThatFits:CGSizeMake(self.view.frame.size.width - 100, FLT_MAX)];
     
-    CGRect screenRect = [SQUtilities screenRect];
-    
     self.footerLabel.frame = CGRectMake(50,
-                                        screenRect.size.height - size.height - 30,
-                                        screenRect.size.width - 100,
+                                        self.view.frame.size.height - size.height - 30,
+                                        self.view.frame.size.width - 100,
                                         size.height);
     
     self.footerLabel.alpha = 0.0f;

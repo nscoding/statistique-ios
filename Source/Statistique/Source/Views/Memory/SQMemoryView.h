@@ -7,9 +7,12 @@
 //
 
 
-@interface SQMemoryView : UIView
+#import "SQBaseView.h"
+
+@interface SQMemoryView : SQBaseView
 {
     NSMutableArray *progressIndicators;
     NSMutableArray *valueLabels;
 }
+
 @end

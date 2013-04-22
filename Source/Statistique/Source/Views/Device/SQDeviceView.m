@@ -32,7 +32,9 @@
     if ((self = [super initWithFrame:frame]))
     {
         self.backgroundColor = [UIColor clearColor];
-
+        self.pageImage = [UIImage imageNamed:@"PanelDevice"];
+        self.headerImage = [UIImage imageNamed:@"HeaderDevice"];
+        
         [self buildAndConfigure];
         
         // schedule the timer
@@ -139,14 +141,5 @@
     [self addSubview:self.batteryProgressView];
 }
 
-
-// ------------------------------------------------------------------------------------------
-#pragma mark - Draw rect
-// ------------------------------------------------------------------------------------------
-- (void)drawRect:(CGRect)rect
-{
-    [[UIImage imageNamed:@"PanelDevice"] drawAtPoint:CGPointMake(0, 38)];
-    [[UIImage imageNamed:@"HeaderDevice"] drawAtPoint:CGPointMake(40, 49)];
-}
 
 @end

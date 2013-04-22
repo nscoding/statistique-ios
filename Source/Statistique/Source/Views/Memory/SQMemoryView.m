@@ -34,6 +34,8 @@
     if ((self = [super initWithFrame:frame]))
     {
         self.backgroundColor = [UIColor clearColor];
+        self.pageImage = [UIImage imageNamed:@"PanelMemory"];
+        self.headerImage = [UIImage imageNamed:@"HeaderMemory"];
 
         // instantiate the arrays
         progressIndicators = [[NSMutableArray alloc] init];
@@ -136,16 +138,6 @@
         [self addSubview:progressView];
         [progressIndicators addObject:progressView];
     }
-}
-
-
-// ------------------------------------------------------------------------------------------
-#pragma mark - Draw rect
-// ------------------------------------------------------------------------------------------
-- (void)drawRect:(CGRect)rect
-{
-    [[UIImage imageNamed:@"PanelMemory"] drawAtPoint:CGPointMake(0, 38)];
-    [[UIImage imageNamed:@"HeaderMemory"] drawAtPoint:CGPointMake(40, 49)];
 }
 
 
