@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD53C9C51737B7C200264230 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = CD53C9BD1737B7C200264230 /* .gitignore */; };
+		CD53C9C61737B7C200264230 /* Appirater.m in Sources */ = {isa = PBXBuildFile; fileRef = CD53C9BF1737B7C200264230 /* Appirater.m */; };
+		CD53C9C71737B7C200264230 /* AppiraterLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CD53C9C11737B7C200264230 /* AppiraterLocalizable.strings */; };
+		CD53C9C81737B7C200264230 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = CD53C9C41737B7C200264230 /* README.md */; };
+		CD53C9CA1737B7D500264230 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CD53C9C91737B7D500264230 /* Settings.bundle */; };
+		CD53C9CD1737B88900264230 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD53C9CC1737B88900264230 /* SystemConfiguration.framework */; };
+		CD53C9CF1737B88F00264230 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD53C9CE1737B88F00264230 /* CFNetwork.framework */; };
+		CD53C9D11737B89600264230 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD53C9D01737B89600264230 /* StoreKit.framework */; };
 		CD76733D1725257500F44AC1 /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD76733B1725257500F44AC1 /* libTestFlight.a */; };
 		CD76733F172525B700F44AC1 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CD76733E172525B700F44AC1 /* libz.dylib */; };
 		CD8C80EE17255B2200B545A9 /* SQBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = CD8C80ED17255B2200B545A9 /* SQBaseView.m */; };
@@ -41,6 +49,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CD53C9BD1737B7C200264230 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		CD53C9BE1737B7C200264230 /* Appirater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Appirater.h; sourceTree = "<group>"; };
+		CD53C9BF1737B7C200264230 /* Appirater.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Appirater.m; sourceTree = "<group>"; };
+		CD53C9C01737B7C200264230 /* AppiraterDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppiraterDelegate.h; sourceTree = "<group>"; };
+		CD53C9C21737B7C200264230 /* el */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = el; path = el.lproj/AppiraterLocalizable.strings; sourceTree = "<group>"; };
+		CD53C9C31737B7C200264230 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/AppiraterLocalizable.strings; sourceTree = "<group>"; };
+		CD53C9C41737B7C200264230 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		CD53C9C91737B7D500264230 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		CD53C9CC1737B88900264230 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		CD53C9CE1737B88F00264230 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		CD53C9D01737B89600264230 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		CD76733B1725257500F44AC1 /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
 		CD76733C1725257500F44AC1 /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
 		CD76733E172525B700F44AC1 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -92,6 +111,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD53C9D11737B89600264230 /* StoreKit.framework in Frameworks */,
+				CD53C9CF1737B88F00264230 /* CFNetwork.framework in Frameworks */,
+				CD53C9CD1737B88900264230 /* SystemConfiguration.framework in Frameworks */,
 				CD76733F172525B700F44AC1 /* libz.dylib in Frameworks */,
 				CDA3D22417231036001482D9 /* UIKit.framework in Frameworks */,
 				CDA3D22617231036001482D9 /* Foundation.framework in Frameworks */,
@@ -103,9 +125,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CD53C9BC1737B7C200264230 /* Appirater */ = {
+			isa = PBXGroup;
+			children = (
+				CD53C9BD1737B7C200264230 /* .gitignore */,
+				CD53C9BE1737B7C200264230 /* Appirater.h */,
+				CD53C9BF1737B7C200264230 /* Appirater.m */,
+				CD53C9C01737B7C200264230 /* AppiraterDelegate.h */,
+				CD53C9C11737B7C200264230 /* AppiraterLocalizable.strings */,
+				CD53C9C41737B7C200264230 /* README.md */,
+			);
+			path = Appirater;
+			sourceTree = "<group>";
+		};
 		CD76733A1725257500F44AC1 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				CD53C9BC1737B7C200264230 /* Appirater */,
 				CD76733B1725257500F44AC1 /* libTestFlight.a */,
 				CD76733C1725257500F44AC1 /* TestFlight.h */,
 			);
@@ -125,6 +161,7 @@
 		CDA3D21717231036001482D9 = {
 			isa = PBXGroup;
 			children = (
+				CD53C9C91737B7D500264230 /* Settings.bundle */,
 				CDA3D28A17231393001482D9 /* Icon@2x.png */,
 				CDA3D2881723138F001482D9 /* Icon.png */,
 				CDA3D22917231036001482D9 /* Statistique */,
@@ -144,10 +181,13 @@
 		CDA3D22217231036001482D9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				CD76733E172525B700F44AC1 /* libz.dylib */,
-				CDA3D22317231036001482D9 /* UIKit.framework */,
-				CDA3D22517231036001482D9 /* Foundation.framework */,
+				CD53C9CE1737B88F00264230 /* CFNetwork.framework */,
 				CDA3D22717231036001482D9 /* CoreGraphics.framework */,
+				CDA3D22517231036001482D9 /* Foundation.framework */,
+				CD76733E172525B700F44AC1 /* libz.dylib */,
+				CD53C9D01737B89600264230 /* StoreKit.framework */,
+				CD53C9CC1737B88900264230 /* SystemConfiguration.framework */,
+				CDA3D22317231036001482D9 /* UIKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -353,6 +393,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				el,
 			);
 			mainGroup = CDA3D21717231036001482D9;
 			productRefGroup = CDA3D22117231036001482D9 /* Products */;
@@ -385,6 +426,10 @@
 				CDA3D2AD17233116001482D9 /* SQViewController.xib in Resources */,
 				CDA3D2B917233CB7001482D9 /* Pattern.png in Resources */,
 				CDA3D2BA17233CB7001482D9 /* Pattern@2x.png in Resources */,
+				CD53C9C51737B7C200264230 /* .gitignore in Resources */,
+				CD53C9C71737B7C200264230 /* AppiraterLocalizable.strings in Resources */,
+				CD53C9C81737B7C200264230 /* README.md in Resources */,
+				CD53C9CA1737B7D500264230 /* Settings.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,10 +450,23 @@
 				CDA3D2C2172342BD001482D9 /* SQDeviceView.m in Sources */,
 				CDD066DC172353E900A187C0 /* SQDeviceHelper.m in Sources */,
 				CD8C80EE17255B2200B545A9 /* SQBaseView.m in Sources */,
+				CD53C9C61737B7C200264230 /* Appirater.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CD53C9C11737B7C200264230 /* AppiraterLocalizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CD53C9C21737B7C200264230 /* el */,
+				CD53C9C31737B7C200264230 /* en */,
+			);
+			name = AppiraterLocalizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		CD767346172528AB00F44AC1 /* Adhoc */ = {
@@ -452,6 +510,8 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Statistique/Source/Libraries\"",
+					"\"$(SRCROOT)/../../Greek-Radio/Source/Greek Radio/Greek Radio/Libraries\"",
+					"\"$(SRCROOT)/../../Greek-Radio/Source/Greek Radio/Greek Radio/Libraries/TestFlight\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "A79650C4-42B3-4237-AA6A-1037F83AA848";
@@ -535,6 +595,8 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Statistique/Source/Libraries\"",
+					"\"$(SRCROOT)/../../Greek-Radio/Source/Greek Radio/Greek Radio/Libraries\"",
+					"\"$(SRCROOT)/../../Greek-Radio/Source/Greek Radio/Greek Radio/Libraries/TestFlight\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "65E21223-C005-4E89-8836-120DD4D453B5";
@@ -555,6 +617,8 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Statistique/Source/Libraries\"",
+					"\"$(SRCROOT)/../../Greek-Radio/Source/Greek Radio/Greek Radio/Libraries\"",
+					"\"$(SRCROOT)/../../Greek-Radio/Source/Greek Radio/Greek Radio/Libraries/TestFlight\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "A79650C4-42B3-4237-AA6A-1037F83AA848";
