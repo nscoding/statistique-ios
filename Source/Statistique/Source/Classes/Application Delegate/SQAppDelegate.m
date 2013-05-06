@@ -10,7 +10,6 @@
 #import "SQAppDelegate.h"
 #import "SQViewController.h"
 
-
 #import "TestFlight.h"
 #import "Appirater.h"
 
@@ -33,10 +32,10 @@
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
     
-    [Appirater setAppId:@"321094050"];
-    [Appirater setDaysUntilPrompt:6];
+    [Appirater setAppId:@"326158054"];
+    [Appirater setDaysUntilPrompt:3];
     [Appirater setUsesUntilPrompt:3];
-    [Appirater setSignificantEventsUntilPrompt:0];
+    [Appirater setSignificantEventsUntilPrompt:-1];
     [Appirater setTimeBeforeReminding:3];
     [Appirater setUsesAnimation:YES];
     
