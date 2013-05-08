@@ -33,7 +33,15 @@
     {
         self.backgroundColor = [UIColor clearColor];
         self.pageImage = [UIImage imageNamed:@"PanelDevice"];
-        self.headerImage = [UIImage imageNamed:@"HeaderDevice"];
+
+        NSString *language = [[NSLocale preferredLanguages] objectAtIndex:0];
+        self.headerImage = [UIImage imageNamed:[@"Device" stringByAppendingString:[language uppercaseString]]];
+
+        // fallback
+        if (self.headerImage == nil)
+        {
+            self.headerImage = [UIImage imageNamed:@"Device"];
+        }
         
         [self buildAndConfigure];
         
@@ -115,7 +123,7 @@
     
     
     // add the battery title label
-    UILabel *batteryLabel = [SQLabelFactory boldLabelForString:@"Battery"];
+    UILabel *batteryLabel = [SQLabelFactory boldLabelForString:NSLocalizedString(@"label_battery", @"")];
     batteryLabel.frame = CGRectMake(20, 230,
                                  batteryLabel.frame.size.width,
                                  batteryLabel.frame.size.height);
