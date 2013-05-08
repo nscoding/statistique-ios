@@ -187,11 +187,12 @@
     
     CGSize size = [self.footerLabel sizeThatFits:CGSizeMake(self.view.frame.size.width - 100, FLT_MAX)];
     
-    self.footerLabel.frame = CGRectMake(50,
+    self.footerLabel.frame = CGRectMake(20,
                                         self.view.frame.size.height - size.height - 30,
-                                        self.view.frame.size.width - 100,
+                                        self.view.frame.size.width - 40,
                                         size.height);
     
+    self.footerLabel.frame = [SQUtilities floorOriginForRect:self.footerLabel.frame];
     self.footerLabel.alpha = 0.0f;
     [self.view addSubview:self.footerLabel];
 }

@@ -42,7 +42,7 @@
         // fallback
         if (self.headerImage == nil)
         {
-            self.headerImage = [UIImage imageNamed:@"Memory"];
+            self.headerImage = [UIImage imageNamed:@"MemoryEN"];
         }
     
         // instantiate the arrays

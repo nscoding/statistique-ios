@@ -40,7 +40,7 @@
         // fallback
         if (self.headerImage == nil)
         {
-            self.headerImage = [UIImage imageNamed:@"Device"];
+            self.headerImage = [UIImage imageNamed:@"DeviceEN"];
         }
         
         [self buildAndConfigure];
