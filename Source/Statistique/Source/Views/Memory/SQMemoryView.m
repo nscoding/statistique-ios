@@ -35,8 +35,16 @@
     {
         self.backgroundColor = [UIColor clearColor];
         self.pageImage = [UIImage imageNamed:@"PanelMemory"];
-        self.headerImage = [UIImage imageNamed:@"HeaderMemory"];
 
+        NSString *language = [[NSLocale preferredLanguages] objectAtIndex:0];
+        self.headerImage = [UIImage imageNamed:[@"Memory" stringByAppendingString:[language uppercaseString]]];
+        
+        // fallback
+        if (self.headerImage == nil)
+        {
+            self.headerImage = [UIImage imageNamed:@"MemoryEN"];
+        }
+    
         // instantiate the arrays
         progressIndicators = [[NSMutableArray alloc] init];
         valueLabels = [[NSMutableArray alloc] init];

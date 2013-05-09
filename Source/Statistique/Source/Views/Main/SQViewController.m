@@ -166,12 +166,14 @@
     label.shadowColor = [UIColor colorWithWhite:0.3 alpha:1.0];
     label.shadowOffset = CGSizeMake(0, 1);
     label.textAlignment = NSTextAlignmentCenter;
-    label.text =  @"Made in Berlin with Love\n❝Patrick Chamelo❞";
+    label.text =  @"Made in Berlin with Love\n❝Patrick - Vasileia❞";
     label.numberOfLines = 0;
     
     [label sizeToFit];
     [label setTransform:CGAffineTransformMakeRotation(-M_PI / 2)];
     [label setCenter:CGPointMake(self.scrollView.contentSize.width + 50, self.view.center.y)];
+    
+    label.frame = [SQUtilities floorOriginForRect:label.frame];
     
     [self.scrollView addSubview:label];
 }
@@ -179,17 +181,18 @@
 
 - (void)buildAndConfigureFooter
 {
-    self.footerLabel = [SQLabelFactory normalLabelForString:@"You can close some applications to free up your memory..."];
+    self.footerLabel = [SQLabelFactory normalLabelForString:NSLocalizedString(@"label_free_up", @"")];
     self.footerLabel.font = [UIFont fontWithName:@"HelveticaNeue-Medium" size:13];
     self.footerLabel.textAlignment = NSTextAlignmentCenter;
     
     CGSize size = [self.footerLabel sizeThatFits:CGSizeMake(self.view.frame.size.width - 100, FLT_MAX)];
     
-    self.footerLabel.frame = CGRectMake(50,
+    self.footerLabel.frame = CGRectMake(20,
                                         self.view.frame.size.height - size.height - 30,
-                                        self.view.frame.size.width - 100,
+                                        self.view.frame.size.width - 40,
                                         size.height);
     
+    self.footerLabel.frame = [SQUtilities floorOriginForRect:self.footerLabel.frame];
     self.footerLabel.alpha = 0.0f;
     [self.view addSubview:self.footerLabel];
 }
