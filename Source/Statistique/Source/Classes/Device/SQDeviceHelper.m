@@ -20,16 +20,16 @@
     switch (row)
     {
         case 0:
-            return NSLocalizedString(@"Name", @"");
+            return NSLocalizedString(@"label_name", @"");
             break;
         case 1:
-            return NSLocalizedString(@"Model", @"");
+            return NSLocalizedString(@"label_model", @"");
             break;
         case 2:
-            return NSLocalizedString(@"System Name", @"");
+            return NSLocalizedString(@"label_system_name", @"");
             break;
         case 3:
-            return NSLocalizedString(@"System Version", @"");
+            return NSLocalizedString(@"label_system_version", @"");
             break;     
         default:
             break;

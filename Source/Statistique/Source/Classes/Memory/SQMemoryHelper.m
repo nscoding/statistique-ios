@@ -84,27 +84,27 @@
     {
         case SQMemoryOptionFree:
         {
-            return NSLocalizedString(@"Free", @"");
+            return NSLocalizedString(@"label_free", @"");
         }
             break;
         case SQMemoryOptionInactive:
         {
-            return NSLocalizedString(@"Inactive", @"");
+            return NSLocalizedString(@"label_inactive", @"");
         }
             break;
         case SQMemoryOptionActive:
         {
-            return NSLocalizedString(@"Active", @"");
+            return NSLocalizedString(@"label_active", @"");
         }
             break;
         case SQMemoryOptionWired:
         {
-            return NSLocalizedString(@"Wired", @"");
+            return NSLocalizedString(@"label_wired", @"");
         }
             break;
         case SQMemoryOptionAll:
         {
-            return NSLocalizedString(@"All", @"");
+            return NSLocalizedString(@"label_all", @"");
         }
             break;
     }
