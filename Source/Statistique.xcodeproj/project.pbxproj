@@ -15,7 +15,6 @@
 		CD53C9CD1737B88900264230 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD53C9CC1737B88900264230 /* SystemConfiguration.framework */; };
 		CD53C9CF1737B88F00264230 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD53C9CE1737B88F00264230 /* CFNetwork.framework */; };
 		CD53C9D11737B89600264230 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD53C9D01737B89600264230 /* StoreKit.framework */; };
-		CD76733D1725257500F44AC1 /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD76733B1725257500F44AC1 /* libTestFlight.a */; };
 		CD76733F172525B700F44AC1 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CD76733E172525B700F44AC1 /* libz.dylib */; };
 		CD8C80EE17255B2200B545A9 /* SQBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = CD8C80ED17255B2200B545A9 /* SQBaseView.m */; };
 		CD9EF373173AA7B5006AD8C3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CD9EF370173AA7B5006AD8C3 /* Localizable.strings */; };
@@ -51,6 +50,9 @@
 		CDA3D2BE1723403E001482D9 /* SQUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA3D2BD1723403E001482D9 /* SQUtilities.m */; };
 		CDA3D2C2172342BD001482D9 /* SQDeviceView.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA3D2C1172342BD001482D9 /* SQDeviceView.m */; };
 		CDD066DC172353E900A187C0 /* SQDeviceHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CDD066DB172353E900A187C0 /* SQDeviceHelper.m */; };
+		CDEA24411794730E002AFBCC /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CDEA243B1794730E002AFBCC /* libTestFlight.a */; };
+		CDEA24421794730F002AFBCC /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = CDEA243C1794730E002AFBCC /* README.md */; };
+		CDEA24431794730F002AFBCC /* release_notes.md in Resources */ = {isa = PBXBuildFile; fileRef = CDEA243D1794730E002AFBCC /* release_notes.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,8 +67,6 @@
 		CD53C9CC1737B88900264230 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		CD53C9CE1737B88F00264230 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		CD53C9D01737B89600264230 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
-		CD76733B1725257500F44AC1 /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
-		CD76733C1725257500F44AC1 /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
 		CD76733E172525B700F44AC1 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		CD8C80EC17255B2200B545A9 /* SQBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQBaseView.h; sourceTree = "<group>"; };
 		CD8C80ED17255B2200B545A9 /* SQBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQBaseView.m; sourceTree = "<group>"; };
@@ -115,6 +115,12 @@
 		CDA3D2C1172342BD001482D9 /* SQDeviceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQDeviceView.m; sourceTree = "<group>"; };
 		CDD066DA172353E900A187C0 /* SQDeviceHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQDeviceHelper.h; sourceTree = "<group>"; };
 		CDD066DB172353E900A187C0 /* SQDeviceHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQDeviceHelper.m; sourceTree = "<group>"; };
+		CDEA243B1794730E002AFBCC /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
+		CDEA243C1794730E002AFBCC /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		CDEA243D1794730E002AFBCC /* release_notes.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = release_notes.md; sourceTree = "<group>"; };
+		CDEA243E1794730E002AFBCC /* TestFlight+AsyncLogging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestFlight+AsyncLogging.h"; sourceTree = "<group>"; };
+		CDEA243F1794730E002AFBCC /* TestFlight+ManualSessions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestFlight+ManualSessions.h"; sourceTree = "<group>"; };
+		CDEA24401794730E002AFBCC /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,7 +135,7 @@
 				CDA3D22417231036001482D9 /* UIKit.framework in Frameworks */,
 				CDA3D22617231036001482D9 /* Foundation.framework in Frameworks */,
 				CDA3D22817231036001482D9 /* CoreGraphics.framework in Frameworks */,
-				CD76733D1725257500F44AC1 /* libTestFlight.a in Frameworks */,
+				CDEA24411794730E002AFBCC /* libTestFlight.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,9 +158,8 @@
 		CD76733A1725257500F44AC1 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				CDEA243A1794730E002AFBCC /* TestFlightSDK */,
 				CD53C9BC1737B7C200264230 /* Appirater */,
-				CD76733B1725257500F44AC1 /* libTestFlight.a */,
-				CD76733C1725257500F44AC1 /* TestFlight.h */,
 			);
 			name = Libraries;
 			path = Source/Libraries;
@@ -381,6 +386,19 @@
 			path = Device;
 			sourceTree = "<group>";
 		};
+		CDEA243A1794730E002AFBCC /* TestFlightSDK */ = {
+			isa = PBXGroup;
+			children = (
+				CDEA243B1794730E002AFBCC /* libTestFlight.a */,
+				CDEA243C1794730E002AFBCC /* README.md */,
+				CDEA243D1794730E002AFBCC /* release_notes.md */,
+				CDEA243E1794730E002AFBCC /* TestFlight+AsyncLogging.h */,
+				CDEA243F1794730E002AFBCC /* TestFlight+ManualSessions.h */,
+				CDEA24401794730E002AFBCC /* TestFlight.h */,
+			);
+			path = TestFlightSDK;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -459,6 +477,8 @@
 				CD9EF379173AAA9E006AD8C3 /* MemoryEL@2x.png in Resources */,
 				CD9EF37C173AAAC9006AD8C3 /* DeviceEL.png in Resources */,
 				CD9EF37D173AAAC9006AD8C3 /* MemoryEL.png in Resources */,
+				CDEA24421794730F002AFBCC /* README.md in Resources */,
+				CDEA24431794730F002AFBCC /* release_notes.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -550,6 +570,7 @@
 					"\"$(SRCROOT)/Statistique/Source/Libraries\"",
 					"\"$(SRCROOT)/../../Greek-Radio/Source/Greek Radio/Greek Radio/Libraries\"",
 					"\"$(SRCROOT)/../../Greek-Radio/Source/Greek Radio/Greek Radio/Libraries/TestFlight\"",
+					"\"$(SRCROOT)/Statistique/Source/Libraries/TestFlightSDK\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "A7DDB7BD-6CC8-47B5-8E8A-173E11F5569F";
@@ -635,6 +656,7 @@
 					"\"$(SRCROOT)/Statistique/Source/Libraries\"",
 					"\"$(SRCROOT)/../../Greek-Radio/Source/Greek Radio/Greek Radio/Libraries\"",
 					"\"$(SRCROOT)/../../Greek-Radio/Source/Greek Radio/Greek Radio/Libraries/TestFlight\"",
+					"\"$(SRCROOT)/Statistique/Source/Libraries/TestFlightSDK\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "65E21223-C005-4E89-8836-120DD4D453B5";
@@ -657,6 +679,7 @@
 					"\"$(SRCROOT)/Statistique/Source/Libraries\"",
 					"\"$(SRCROOT)/../../Greek-Radio/Source/Greek Radio/Greek Radio/Libraries\"",
 					"\"$(SRCROOT)/../../Greek-Radio/Source/Greek Radio/Greek Radio/Libraries/TestFlight\"",
+					"\"$(SRCROOT)/Statistique/Source/Libraries/TestFlightSDK\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "A79650C4-42B3-4237-AA6A-1037F83AA848";

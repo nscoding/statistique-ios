@@ -16,12 +16,11 @@
 
 @implementation SQAppDelegate
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+
+- (BOOL)application:(UIApplication *)application
+didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    
-#if !APPSTORE
     [TestFlight takeOff:@"4271bc9a-cbf6-453f-8138-0de102d1f91c"];
-#endif
     
     NSString *appVersionString = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"];
     [[NSUserDefaults standardUserDefaults] setObject:appVersionString forKey:@"currentVersionKey"];
