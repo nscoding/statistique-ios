@@ -428,6 +428,11 @@
 				CLASSPREFIX = SQ;
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Patrick Chamelo - nscoding";
+				TargetAttributes = {
+					CDA3D21F17231036001482D9 = {
+						DevelopmentTeam = HPSF3D2F4U;
+					};
+				};
 			};
 			buildConfigurationList = CDA3D21B17231036001482D9 /* Build configuration list for PBXProject "Statistique" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -559,8 +564,8 @@
 		CD767347172528AB00F44AC1 /* Adhoc */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Patrick CHAMELO (HPSF3D2F4U)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Patrick CHAMELO (HPSF3D2F4U)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Patrick CHAMELO (95K2385WWW)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Statistique/Statistique-Prefix.pch";
 				INFOPLIST_FILE = "Statistique/Statistique-Info.plist";
@@ -573,8 +578,8 @@
 					"\"$(SRCROOT)/Statistique/Source/Libraries/TestFlightSDK\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "DB21DA05-7FD5-4D02-8D1D-AE21ED05A569";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "DB21DA05-7FD5-4D02-8D1D-AE21ED05A569";
+				PROVISIONING_PROFILE = "D6BF0648-9617-40C1-AEA6-DAA29A9CC8E8";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "D6BF0648-9617-40C1-AEA6-DAA29A9CC8E8";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Adhoc;
@@ -646,7 +651,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer: Patrick CHAMELO (95K2385WWW)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Patrick CHAMELO (4S7SPYVR8G)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Statistique/Statistique-Prefix.pch";
 				INFOPLIST_FILE = "Statistique/Statistique-Info.plist";
@@ -682,8 +687,8 @@
 					"\"$(SRCROOT)/Statistique/Source/Libraries/TestFlightSDK\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "0E0B4AD0-2C85-4672-963E-19509120AE20";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "0E0B4AD0-2C85-4672-963E-19509120AE20";
+				PROVISIONING_PROFILE = "A46BF095-2813-4FC5-A8DC-E4744F102FE9";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "A46BF095-2813-4FC5-A8DC-E4744F102FE9";
 				WRAPPER_EXTENSION = app;
 			};
 			name = "App Store";
