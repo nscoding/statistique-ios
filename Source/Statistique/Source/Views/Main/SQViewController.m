@@ -239,7 +239,7 @@
 // ------------------------------------------------------------------------------------------
 - (void)dealloc
 {
-    [[NSNotificationCenter defaultCenter] removeObject:self];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 
